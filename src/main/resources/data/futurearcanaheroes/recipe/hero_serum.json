@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:gold_nugget",
+    "minecraft:glowstone_dust",
+    "minecraft:sugar"
+  ],
+  "result": { "id": "futurearcanaheroes:hero_serum", "count": 1 }
+}

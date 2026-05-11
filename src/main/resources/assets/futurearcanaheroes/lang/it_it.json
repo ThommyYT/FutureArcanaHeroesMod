@@ -1,0 +1,36 @@
+{
+  "itemGroup.futurearcanaheroes": "Futuro, Arcani & Supereroi",
+
+  "item.futurearcanaheroes.quantum_console": "Console Quantica",
+  "item.futurearcanaheroes.temporal_anchor": "Ancora Temporale",
+  "item.futurearcanaheroes.temporal_tunnel": "Tunnel Temporale",
+
+  "item.futurearcanaheroes.nano_alloy_ingot": "Lingotto di Nano-Lega",
+  "item.futurearcanaheroes.chrono_bracelet": "Bracciale Crono",
+  "item.futurearcanaheroes.arcane_staff": "Bastone Arcano",
+  "item.futurearcanaheroes.vampiric_elixir": "Elisir Vampirico",
+  "item.futurearcanaheroes.lycanthrope_elixir": "Elisir del Lupo Mannaro",
+  "item.futurearcanaheroes.hero_serum": "Siero dell'Eroe",
+  "item.futurearcanaheroes.wooden_stake": "Paletto di Legno",
+  "item.futurearcanaheroes.vampire_spawn_egg": "Uovo di Spawn del Vampiro",
+
+  "effect.futurearcanaheroes.vampirism": "Vampirismo",
+  "effect.futurearcanaheroes.lycanthropy": "Licantropia",
+  "effect.futurearcanaheroes.heroic": "Eroico",
+
+  "message.futurearcanaheroes.quantum_console": "La Console Quantica vibra di tecnologia del futuro…",
+  "message.futurearcanaheroes.temporal_anchor": "Un'Ancora Temporale stabilizza la linea del tempo attorno a te.",
+
+  "message.futurearcanaheroes.chrono_saved": "Time Marker salvato (shift + tasto destro).",
+  "message.futurearcanaheroes.chrono_missing": "Nessun Time Marker trovato. Shift + tasto destro per impostarne uno.",
+  "message.futurearcanaheroes.chrono_invalid": "I dati del Time Marker non sono validi.",
+  "message.futurearcanaheroes.chrono_dim_unloaded": "Quella dimensione non è disponibile in questo momento.",
+  "message.futurearcanaheroes.chrono_leap": "Quantum Leap! Sei tornato al tuo marker.",
+
+  "message.futurearcanaheroes.staff_hit": "Dardo arcano lanciato!",
+  "message.futurearcanaheroes.staff_no_target": "Nessun bersaglio in vista.",
+
+  "entity.futurearcanaheroes.vampire": "Vampiro",
+  "entity.futurearcanaheroes.lycanthrope": "Licantropo",
+  "biome.futurearcanaheroes.vampire_forest": "Foresta dei Vampiri"
+}

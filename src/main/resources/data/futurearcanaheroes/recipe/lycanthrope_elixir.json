@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+	"minecraft:bone",
+	"minecraft:gray_dye",
+	"minecraft:sugar" 
+  ],
+  "result": { "id": "futurearcanaheroes:lycanthrope_elixir", "count": 1 }
+}

@@ -1,0 +1,50 @@
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+# gradle
+build
+.gradle
+
+# other
+eclipse
+run
+
+# Files from Forge MDK
+forge*changelog.txt
+
+# --- Aggiungi queste sezioni al tuo file ---
+
+# Esclude i log e i debug di gioco (molto pesanti)
+logs/
+debug.log
+*.log
+
+# Esclude le cartelle di runtime di Minecraft (dove si salvano i mondi di test)
+runClient/
+runServer/
+runData/
+usercache.json
+usernamecache.json
+
+# Esclude i file temporanei di sistema
+.DS_Store
+Thumbs.db
+
+# Esclude file di backup o configurazioni gradle locali
+gradle.properties
+!gradle-wrapper.properties
+
+BlockBench/
+

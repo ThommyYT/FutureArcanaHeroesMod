@@ -1,0 +1,37 @@
+{
+  "itemGroup.futurearcanaheroes": "Future Arcana & Heroes",
+
+  "item.futurearcanaheroes.quantum_console": "Quantum Console",
+  "item.futurearcanaheroes.temporal_anchor": "Temporal Anchor",
+  "item.futurearcanaheroes.temporal_tunnel": "Temporal Tunnel",
+
+
+  "item.futurearcanaheroes.nano_alloy_ingot": "Nano Alloy Ingot",
+  "item.futurearcanaheroes.chrono_bracelet": "Chrono Bracelet",
+  "item.futurearcanaheroes.arcane_staff": "Arcane Staff",
+  "item.futurearcanaheroes.vampiric_elixir": "Vampiric Elixir",
+  "item.futurearcanaheroes.lycanthrope_elixir": "Lycanthropy Elixir",
+  "item.futurearcanaheroes.hero_serum": "Hero Serum",
+  "item.futurearcanaheroes.wooden_stake": "Wooden Stake",
+  "item.futurearcanaheroes.vampire_spawn_egg": "Vampire Spawn Egg",
+
+  "effect.futurearcanaheroes.vampirism": "Vampirism",
+  "effect.futurearcanaheroes.lycanthropy": "Lycanthropy",
+  "effect.futurearcanaheroes.heroic": "Heroic",
+
+  "message.futurearcanaheroes.quantum_console": "The Quantum Console hums with future tech…",
+  "message.futurearcanaheroes.temporal_anchor": "A Temporal Anchor stabilizes the timeline around you.",
+
+  "message.futurearcanaheroes.chrono_saved": "Time Marker saved (sneak + right click).",
+  "message.futurearcanaheroes.chrono_missing": "No Time Marker found. Sneak + right click to set one.",
+  "message.futurearcanaheroes.chrono_invalid": "Time Marker data is invalid.",
+  "message.futurearcanaheroes.chrono_dim_unloaded": "That dimension is not available right now.",
+  "message.futurearcanaheroes.chrono_leap": "Quantum Leap! You snapped back to your marker.",
+
+  "message.futurearcanaheroes.staff_hit": "Hex Bolt cast!",
+  "message.futurearcanaheroes.staff_no_target": "No target in sight.",
+
+  "entity.futurearcanaheroes.vampire": "Vampire",
+  "entity.futurearcanaheroes.lycanthrope": "lycanthrope",
+  "biome.futurearcanaheroes.vampire_forest": "Vampire Forest"
+}

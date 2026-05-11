@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "N N",
+    "CPC",
+    " R "
+  ],
+  "key": {
+    "N": "futurearcanaheroes:nano_alloy_ingot",
+    "C": "minecraft:clock",
+    "P": "minecraft:ender_pearl",
+    "R": "minecraft:redstone"
+  },
+  "result": { "id": "futurearcanaheroes:chrono_bracelet", "count": 1 }
+}

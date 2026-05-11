@@ -1,0 +1,15 @@
+{
+	"structures": [
+		{
+			"structure": "futurearcanaheroes:castle_vampire",
+			"weight": 1
+		}
+	],
+	"placement": {
+		"type": "minecraft:random_spread",
+		"salt": 123456789,
+		"spacing": 80,
+		"separation": 30,
+		"spread_type": "linear"
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"type": "futurearcanaheroes:temporal_tunnel_type",
+	"generator": {
+		"type": "minecraft:flat",
+		"settings": {
+			"biome": "minecraft:the_void",
+			"lakes": false,
+			"features": false,
+			"layers": [
+				{
+					"height": 1,
+					"block": "futurearcanaheroes:temporal_tunnel"
+				},
+				{
+					"height": 10,
+					"block": "minecraft:air"
+				},
+				{
+					"height": 1,
+					"block": "futurearcanaheroes:temporal_tunnel"
+				}
+			]
+		}
+	}
+}

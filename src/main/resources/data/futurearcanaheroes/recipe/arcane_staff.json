@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  A",
+    " S ",
+    "S  "
+  ],
+  "key": {
+    "S": "minecraft:stick",
+    "A": "minecraft:amethyst_shard"
+  },
+  "result": { "id": "futurearcanaheroes:arcane_staff", "count": 1 }
+}

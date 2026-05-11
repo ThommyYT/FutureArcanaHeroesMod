@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#futurearcanaheroes:has_vampire_forest",
+  "features": "futurearcanaheroes:vampire_coarse_dirt_disk",
+  "step": "underground_ores"
+}

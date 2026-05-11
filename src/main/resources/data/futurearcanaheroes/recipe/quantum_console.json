@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"NNN",
+		"RCR",
+		"NNN"
+	],
+	"key": {
+		"N": "futurearcanaheroes:nano_alloy_ingot",
+		"R": "minecraft:redstone",
+		"C": "minecraft:comparator"
+	},
+	"result": {
+		"id": "futurearcanaheroes:quantum_console",
+		"count": 1
+	}
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:spider_eye",
+    "minecraft:red_dye",
+    "minecraft:sugar"
+  ],
+  "result": { "id": "futurearcanaheroes:vampiric_elixir", "count": 1 }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " QC",
+    "QCQ",
+    "CQ "
+  ],
+  "key": {
+    "Q": "minecraft:quartz",
+    "C": "minecraft:clock" 
+  },
+  "result": { "id": "futurearcanaheroes:temporal_anchor", "count": 1 }
+}
