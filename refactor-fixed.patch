@@ -52,6 +52,7 @@ index 0000000..1111111
 +        this.corruption = tag.getInt("corruption");
 +    }
 +}
+
 diff --git a/src/main/java/it/futurearcana/futurearcanaheroes/systems/race/RaceType.java b/src/main/java/it/futurearcana/futurearcanaheroes/systems/race/RaceType.java
 new file mode 100644
 index 0000000..2222222
@@ -65,6 +66,7 @@ index 0000000..2222222
 +    VAMPIRE,
 +    LYCAN
 +}
+
 diff --git a/src/main/java/it/futurearcana/futurearcanaheroes/systems/race/RaceManager.java b/src/main/java/it/futurearcana/futurearcanaheroes/systems/race/RaceManager.java
 new file mode 100644
 index 0000000..3333333
@@ -89,6 +91,7 @@ index 0000000..3333333
 +        return "lycan".equals(data.getRace());
 +    }
 +}
+
 diff --git a/src/main/java/it/futurearcana/futurearcanaheroes/systems/vampire/VampireSystem.java b/src/main/java/it/futurearcana/futurearcanaheroes/systems/vampire/VampireSystem.java
 new file mode 100644
 index 0000000..4444444
@@ -115,6 +118,7 @@ index 0000000..4444444
 +        }
 +    }
 +}
+
 diff --git a/src/main/java/it/futurearcana/futurearcanaheroes/systems/lycan/LycanSystem.java b/src/main/java/it/futurearcana/futurearcanaheroes/systems/lycan/LycanSystem.java
 new file mode 100644
 index 0000000..5555555
@@ -140,6 +144,7 @@ index 0000000..5555555
 +        }
 +    }
 +}
+
 diff --git a/src/main/java/it/futurearcana/futurearcanaheroes/common/player/PlayerHandler.java b/src/main/java/it/futurearcana/futurearcanaheroes/common/player/PlayerHandler.java
 new file mode 100644
 index 0000000..6666666
