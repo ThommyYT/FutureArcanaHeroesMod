@@ -1,11 +1,5 @@
 package it.futurearcana.futurearcanaheroes.events;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
-
-import it.futurearcana.futurearcanaheroes.Main;
-import it.futurearcana.futurearcanaheroes.registry.DimensionRegistries;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.util.RandomSource;
@@ -15,59 +9,28 @@ import net.minecraftforge.event.TickEvent.ServerTickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
+import it.futurearcana.futurearcanaheroes.Main;
+import it.futurearcana.futurearcanaheroes.registry.DimensionRegistries;
+import it.futurearcana.futurearcanaheroes.systems.player_state.PlayerStateSystem;
+
 @Mod.EventBusSubscriber(modid = Main.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public final class TickEvents {
 
-    // Cambiamo il record per includere uno stato di "attivazione"
-    private static class PendingReturn {
-        UUID playerUUID;
-        float targetTick;
-        Runnable action;
-        boolean isStarted = false; // Indica se il giocatore è arrivato e il countdown è iniziato
-        float delay;
-
-        PendingReturn(UUID uuid, float f, Runnable action) {
-            this.playerUUID = uuid;
-            this.delay = f;
-            this.action = action;
-        }
-    }
-
-    private static final List<PendingReturn> PENDING_RETURNS = new ArrayList<>();
-
-    // Metodo aggiornato: ora il delayTicks partirà solo dal momento dell'effettivo arrivo
-    public static void addDelayedAction(UUID playerUUID, float f, Runnable action) {
-        PENDING_RETURNS.add(new PendingReturn(playerUUID, f, action));
+    /**
+     * Compatibility helper: preserve the previous API so other code can schedule delayed actions here.
+     * Delegates to PlayerStateSystem.
+     */
+    public static void addDelayedAction(java.util.UUID playerUUID, float f, Runnable action) {
+        PlayerStateSystem.addDelayedAction(playerUUID, f, action);
     }
 
     @SubscribeEvent
     public static void onServerTick(ServerTickEvent.Post event) {
-        long currentTick = event.getServer().getTickCount();
-
-        // Usiamo un iteratore classico o removeIf con logica
-        PENDING_RETURNS.removeIf(pending -> {
-            var player = event.getServer().getPlayerList().getPlayer(pending.playerUUID);
-            if (player == null) return true; // Giocatore disconnesso, cancella l'azione
-
-            // FASE 1: Aspetta che il giocatore sia fisicamente nel tunnel
-            if (!pending.isStarted) {
-                if (player.serverLevel().dimension().equals(DimensionRegistries.TEMPORAL_TUNNEL_LEVEL)) {
-                    pending.isStarted = true;
-                    pending.targetTick = currentTick + pending.delay;
-                }
-                return false; // Continua a monitorare
-            }
-
-            // FASE 2: Esegui l'azione dopo il countdown
-            if (currentTick >= pending.targetTick) {
-                pending.action.run();
-                return true;
-            }
-            return false;
-        });
+        // Bridge: delegate all server-side ticking to systems
+        PlayerStateSystem.tick(event.getServer());
     }
 
-    // --- Parte Client (Rimane quasi uguale, corretta solo la struttura) ---
+    // --- Client part remains unchanged except structure: ---
     @Mod.EventBusSubscriber(modid = Main.MODID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
     public final class TickEventsClient {
         @SubscribeEvent
