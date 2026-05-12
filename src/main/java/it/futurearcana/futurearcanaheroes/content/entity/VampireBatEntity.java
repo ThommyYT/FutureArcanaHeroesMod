@@ -19,7 +19,7 @@ public class VampireBatEntity extends Bat {
 	private int returnAfter = 600;
 
 	private static final int DETECT_EVERY_TICKS = 10; // controlla 2 volte al secondo
-	private static final double DETECT_RANGE = 16.0; // raggio �vista�
+	private static final double DETECT_RANGE = 16.0; // raggio â€œvistaâ€
 
 	public VampireBatEntity(EntityType<? extends Bat> type, Level level) {
 		super(type, level);
@@ -41,7 +41,7 @@ public class VampireBatEntity extends Bat {
 
 				this.convertTo(EntityRegistries.VAMPIRE.get(), ConversionParams.single(this, false, false), converted -> {
 					if (converted instanceof VampireEntity v) {
-						v.setTarget(target); // cos� inizia a inseguire subito
+						v.setTarget(target); // cosÃ¬ inizia a inseguire subito
 						v.setHealth(getPersistentData().getFloat("Health"));
 					}
 				});
@@ -60,14 +60,14 @@ public class VampireBatEntity extends Bat {
 	}
 
 	private LivingEntity findSeenTarget() {
-		// Player pi� vicino
+		// Player piÃ¹ vicino
 		Player p = this.level().getNearestPlayer(this, DETECT_RANGE);
 		if (p != null && !p.isSpectator() && !p.isCreative() && this.hasLineOfSight(p)
 				&& !p.hasEffect(EffectRegistries.VAMPIRISM.getKey().getOrThrow(p))) {
 			return p;
 		}
 
-		// Villager pi� vicino nel raggio
+		// Villager piÃ¹ vicino nel raggio
 		AABB box = this.getBoundingBox().inflate(DETECT_RANGE);
 		var villagers = this.level().getEntitiesOfClass(AbstractVillager.class, box, v -> true);
 

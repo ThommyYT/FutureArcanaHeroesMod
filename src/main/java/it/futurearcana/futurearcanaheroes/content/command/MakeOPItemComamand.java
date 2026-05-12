@@ -32,7 +32,7 @@ public class MakeOPItemComamand {
 	    var stack = player.getMainHandItem();
 
 	    if (stack.isEmpty()) {
-	        source.sendFailure(Component.literal("❌ Tieni un item in mano."));
+	        source.sendFailure(Component.literal("Ã¢ÂÅ’ Tieni un item in mano."));
 	        return 0;
 	    }
 
@@ -44,7 +44,7 @@ public class MakeOPItemComamand {
 	        }
 	    });
 
-	    source.sendSuccess(() -> Component.literal("✅ Item OP attivato!"), false);
+	    source.sendSuccess(() -> Component.literal("Ã¢Å“â€¦ Item OP attivato!"), false);
 	    return 1;
 	}
 

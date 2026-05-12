@@ -64,7 +64,7 @@ public class ArcaneStaffItem extends Item {
         Vec3 eyes = player.getEyePosition(1.0F);
         Vec3 look = player.getLookAngle();
 
-        // Cerca entità nel cono visivo
+        // Cerca entitÃƒÂ  nel cono visivo
         return level.getEntitiesOfClass(LivingEntity.class, player.getBoundingBox().inflate(RANGE))
                 .stream()
                 .filter(e -> e != player)
@@ -72,7 +72,7 @@ public class ArcaneStaffItem extends Item {
                 .filter(e -> {
                     Vec3 dir = e.getEyePosition(1.0F).subtract(eyes).normalize();
                     double dot = dir.dot(look);
-                    return dot > 0.94; // ~20°
+                    return dot > 0.94; // ~20Ã‚Â°
                 })
                 .min(Comparator.comparingDouble(e -> e.distanceToSqr(player)))
                 .orElse(null);

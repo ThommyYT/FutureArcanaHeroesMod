@@ -70,7 +70,7 @@ public class ChronoBraceletItem extends Item {
 				nbt = be.saveWithFullMetadata(level.registryAccess());
 			}
 
-			// Usiamo immutable() perch� l'iteratore di betweenClosed riusa lo stesso
+			// Usiamo immutable() perchÃ© l'iteratore di betweenClosed riusa lo stesso
 			// oggetto BlockPos
 			currentSnapshot.put(pos.immutable(), new BlockData(state, nbt));
 		}

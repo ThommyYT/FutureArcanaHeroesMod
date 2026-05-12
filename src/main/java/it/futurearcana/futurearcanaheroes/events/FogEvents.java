@@ -15,7 +15,7 @@ public final class FogEvents {
 
     private static final float VAMPIRE_FOG_DISTANCE = 24.0f;
 
-    // 1. Gestione della DISTANZA (gi� presente, ottimizzata)
+    // 1. Gestione della DISTANZA (giÃ  presente, ottimizzata)
     @SubscribeEvent
     public static void onRenderFog(ViewportEvent.RenderFog event) {
         Camera camera = event.getCamera();

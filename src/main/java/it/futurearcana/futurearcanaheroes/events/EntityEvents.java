@@ -103,8 +103,8 @@ public final class EntityEvents {
 
 		// Applica solo se la vittima:
 		// - ha l'effetto Vampirismo
-		// - è in realtà un VampireEntity
-		// - oppure è un Player (vogliamo proteggere il giocatore)
+		// - ÃƒÂ¨ in realtÃƒÂ  un VampireEntity
+		// - oppure ÃƒÂ¨ un Player (vogliamo proteggere il giocatore)
 		if (!(target.hasEffect(EffectRegistries.VAMPIRISM.getHolder().orElseThrow()) || target instanceof VampireEntity
 				|| target instanceof Player)) {
 			return;
@@ -120,35 +120,35 @@ public final class EntityEvents {
 			return;
 		}
 
-		// 2) Lascia passare danni che bypassano invulnerabilità vanilla
+		// 2) Lascia passare danni che bypassano invulnerabilitÃƒÂ  vanilla
 		if (source.is(DamageTypeTags.BYPASSES_INVULNERABILITY)) {
 			return;
 		}
 
-		// 3) Armi di legno → lascia passare
+		// 3) Armi di legno Ã¢â€ â€™ lascia passare
 		ItemStack weapon = getAttackingItem(source);
 		if (!weapon.isEmpty() && weapon.is(TagRegistries.WOOD_WEAPONS)) {
-		    event.setAmount(event.getAmount() * 1.5f); // 50% in più di danno
+		    event.setAmount(event.getAmount() * 1.5f); // 50% in piÃƒÂ¹ di danno
 			return;
 		}
 
 		// 4) Se l'attaccante stesso:
-		// - ha Vampirismo oppure è un VampireEntity
+		// - ha Vampirismo oppure ÃƒÂ¨ un VampireEntity
 		// allora il danno viene *gestito con una regola speciale*
 		if (source.getEntity() instanceof LivingEntity attacker) {
 			if (attacker.hasEffect(EffectRegistries.VAMPIRISM.getHolder().orElseThrow())
 					|| attacker instanceof VampireEntity) {
 
-				// Regole di difficoltà (optionali):
+				// Regole di difficoltÃƒÂ  (optionali):
 				if (target.level().getDifficulty() == Difficulty.EASY) {
 					return; // lascia passare in EASY
 				}
 
 				if (target.level().getDifficulty() == Difficulty.NORMAL && target.getRandom().nextBoolean()) {
-					return; // 50% di probabilità in NORMAL
+					return; // 50% di probabilitÃƒÂ  in NORMAL
 				}
 
-				// Se la vittima è un giocatore
+				// Se la vittima ÃƒÂ¨ un giocatore
 				if (target instanceof Player player) {
 					if (target.hasEffect(EffectRegistries.VAMPIRISM.getHolder().orElseThrow()))
 						return;

@@ -21,7 +21,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 public class SpawnCommand {
 
-	// ✅ Suggerisce TUTTI i mob registrati (minecraft + mod)
+	// Ã¢Å“â€¦ Suggerisce TUTTI i mob registrati (minecraft + mod)
 	private static final SuggestionProvider<CommandSourceStack> SUGGEST_ALL_ENTITIES = (context, builder) -> {
 		String remaining = builder.getRemainingLowerCase();
 
@@ -35,7 +35,7 @@ public class SpawnCommand {
 		return builder.buildFuture();
 	};
 
-	// ✅ Suggerimenti per count
+	// Ã¢Å“â€¦ Suggerimenti per count
 	private static final SuggestionProvider<CommandSourceStack> SUGGEST_COUNT = (context, builder) -> {
 		builder.suggest(1);
 		builder.suggest(5);
@@ -46,7 +46,7 @@ public class SpawnCommand {
 		return builder.buildFuture();
 	};
 
-	// ✅ Suggerimenti per spread
+	// Ã¢Å“â€¦ Suggerimenti per spread
 	private static final SuggestionProvider<CommandSourceStack> SUGGEST_SPREAD = (context, builder) -> {
 		builder.suggest(0);
 		builder.suggest(3);
@@ -77,7 +77,7 @@ public class SpawnCommand {
 
 		EntityType<?> type = ForgeRegistries.ENTITY_TYPES.getValue(mobId);
 		if (type == null) {
-			source.sendFailure(Component.literal("❌ EntityType non trovato: " + mobId));
+			source.sendFailure(Component.literal("Ã¢ÂÅ’ EntityType non trovato: " + mobId));
 			return 0;
 		}
 
@@ -106,13 +106,13 @@ public class SpawnCommand {
 				mob.finalizeSpawn(level, diff, EntitySpawnReason.COMMAND, null);
 			}
 
-			// aggiunge l'entità al mondo
+			// aggiunge l'entitÃƒÂ  al mondo
 			level.addFreshEntity(entity);
 			spawned++;
 		}
 
 		final int spawnedCount = spawned;
-		source.sendSuccess(() -> Component.literal("✅ Spawnati " + spawnedCount + " mob di tipo: " + mobId), false);
+		source.sendSuccess(() -> Component.literal("Ã¢Å“â€¦ Spawnati " + spawnedCount + " mob di tipo: " + mobId), false);
 		return spawned;
 	}
 
@@ -123,7 +123,7 @@ public class SpawnCommand {
 
 	    BlockPos.MutableBlockPos p = new BlockPos.MutableBlockPos(xzPos.getX(), startY, xzPos.getZ());
 
-	    // Scende finché trova un punto spawnabile (aria + aria sopra + blocco solido sotto)
+	    // Scende finchÃƒÂ© trova un punto spawnabile (aria + aria sopra + blocco solido sotto)
 	    for (int y = startY; y > minY; y--) {
 	        p.setY(y);
 

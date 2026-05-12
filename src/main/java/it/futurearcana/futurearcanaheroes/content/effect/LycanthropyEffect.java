@@ -20,7 +20,7 @@ public class LycanthropyEffect extends MobEffect {
             entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 60, amplifier, false, false));
             entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 60, 0, false, false));
         } else {
-            // Di giorno rimane un po' di forza, ma più "umana".
+            // Di giorno rimane un po' di forza, ma piÃƒÂ¹ "umana".
             entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 60, 0, true, false, true));
         }
 

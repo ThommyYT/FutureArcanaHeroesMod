@@ -68,7 +68,7 @@ public final class PlayerStateSystem {
 
         // Future: iterate over online players and tick PlayerArcanaData, abilities, corruption, etc.
         for (ServerPlayer sp : server.getPlayerList().getPlayers()) {
-            ServerLevel lvl = sp.getLevel();
+            ServerLevel lvl = (ServerLevel) sp.level(); 
             // Placeholder - actual per-player tick logic will be added later
         }
     }

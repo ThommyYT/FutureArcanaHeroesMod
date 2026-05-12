@@ -106,8 +106,8 @@ public class LycanthropeEntity extends Monster implements GeoEntity {
 				return PlayState.CONTINUE;
 			}
 
-			// Se il controller sta già riproducendo TO_RUN o TO_WALK, lasciamolo finire
-			// controllando se l'animazione corrente è una di quelle di transizione
+			// Se il controller sta giÃƒÂ  riproducendo TO_RUN o TO_WALK, lasciamolo finire
+			// controllando se l'animazione corrente ÃƒÂ¨ una di quelle di transizione
 			String currentAnim = state.getController().getCurrentAnimation() != null
 					? state.getController().getCurrentAnimation().animation().name()
 					: "";
