@@ -10,6 +10,9 @@ import it.futurearcana.futurearcanaheroes.registry.CreativeTabRegistries;
 import it.futurearcana.futurearcanaheroes.registry.EffectRegistries;
 import it.futurearcana.futurearcanaheroes.registry.EntityRegistries;
 import it.futurearcana.futurearcanaheroes.registry.ItemRegistries;
+import it.futurearcana.futurearcanaheroes.systems.race.RaceData;
+import it.futurearcana.futurearcanaheroes.systems.race.RaceManager;
+import it.futurearcana.futurearcanaheroes.systems.race.RaceType;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -54,8 +57,15 @@ public class Main {
 
 	private void commonSetup(final FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
-			// QUI dentro è il posto giusto
+			// Register biome
 			Regions.register(new VampireBiome(ResourceLocation.fromNamespaceAndPath(MODID, "overworld"), 1));
+
+			// Register basic race metadata for systems
+			RaceManager.register(new RaceData(RaceType.HUMAN, "Human"));
+			RaceManager.register(new RaceData(RaceType.VAMPIRE, "Vampire"));
+			RaceManager.register(new RaceData(RaceType.LYCANTHROPE, "Lycanthrope"));
+
+			LOGGER.info("{}: Registered basic race data and biome.", MODID);
 		});
 	}
 
